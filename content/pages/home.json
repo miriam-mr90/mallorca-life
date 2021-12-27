@@ -1,0 +1,15 @@
+{
+  "title": "Home",
+  "builder": [
+    {
+      "type": "header",
+      "photo": "public/images/laark-boshoff-5vu_vslxcyq-unsplash.jpg",
+      "title": "Header Home Title"
+    },
+    {
+      "type": "cta",
+      "title": "This is a CTA title",
+      "link": "https://google.es"
+    }
+  ]
+}
