@@ -1,12 +1,14 @@
 {
   "settings": {
-    "react": {
-      "version": "detect"
+    "react": { "version": "detect" },
+    "import/resolver": {
+      "typescript": {}
     }
   },
   "env": {
     "browser": true,
-    "es2021": true
+    "es2021": true,
+    "node": true
   },
   "extends": [
     "eslint:recommended",
@@ -19,8 +21,11 @@
     "plugin:prettier/recommended",
     "plugin:jsx-a11y/recommended",
     "plugin:react-hooks/recommended",
-    "next/core-web-vitals"
+    "next/core-web-vitals",
+    "plugin:import/typescript",
+    "plugin:@typescript-eslint/recommended"
   ],
+  "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true
@@ -28,7 +33,14 @@
     "ecmaVersion": 12,
     "sourceType": "module"
   },
-  "plugins": ["prettier", "react", "jsx-a11y", "react-hooks", "formatjs"],
+  "plugins": [
+    "prettier",
+    "react",
+    "jsx-a11y",
+    "react-hooks",
+    "formatjs",
+    "@typescript-eslint"
+  ],
 
   "rules": {
     "prettier/prettier": "error",
@@ -45,6 +57,8 @@
     "formatjs/no-offset": "error",
     "no-underscore-dangle": "off",
     "no-shadow": "off",
-    "react/require-default-props": "off"
+    "react/require-default-props": "off",
+    "@typescript-eslint/no-use-before-define": ["off"],
+    "@typescript-eslint/explicit-module-boundary-types": "off"
   }
 }
