@@ -1,31 +1,33 @@
-import NextLink from 'next/link'
-
-export interface Category {
-  title: string
-  url: string
-}
-
+import React from "react";
 export interface HeaderProps {
-  categories: Category[]
+  sideBar?: boolean
+  setSideBar?: (sideBar: boolean) => void
 }
 
-export function Header({categories}: HeaderProps): JSX.Element {
-  return (
-    <div>
-      <NextLink href="/">
-        <a className="cursor-pointer">
-          HOME
-        </a>
+export const Header: React.FC<HeaderProps> = ({sideBar = false, setSideBar  }) => (
+  <div>
+    <h1>Mallorca Life</h1>
+    <button
+      className="h-10 px-4 my-3 text-sm uppercase bg-white rounded"
+      onClick={() => setSideBar(true)}
+    >
+      {sideBar ? "Close menu" : "Show menu"}
+    </button>
+  </div>
+)
+
+
+{/* <NextLink href="/">
+  <a className="cursor-pointer">
+    HOME
+  </a>
+</NextLink> */}
+{/* <nav>
+  {categories.map((category) => {
+    return (
+      <NextLink key={category.title} href={category.url}>
+        <a>{category.title}</a>
       </NextLink>
-      <nav>
-        {categories.map((category) => {
-          return (
-            <NextLink key={category.title} href={category.url}>
-              <a>{category.title}</a>
-            </NextLink>
-          )
-        })}
-      </nav>
-    </div>
-  )
-}
+    )
+  })}
+</nav> */}

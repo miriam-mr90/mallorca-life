@@ -4,7 +4,7 @@ const myLoader = ({ src, width, quality }) => {
   return `/${src}?w=${width}&q=${quality || 75}`
 }
 
-function BackgroundImage({ item }) {
+const BackgroundImage = ({ item }) => {
   return (
     <Image
       loader={myLoader}
@@ -16,11 +16,11 @@ function BackgroundImage({ item }) {
   )
 }
 
-function Content({ item }) {
+const Content = ({ item }) => {
   return <div>{item.content}</div>
 }
 
-function Cta({ item }) {
+const Cta = ({ item }) => {
   return <a href={item.link}>{item.title}</a>
 }
 
@@ -30,7 +30,8 @@ const components = {
   cta: Cta,
 }
 
-export default function Builder(props) {
+// export function Builder(props) { // TODO: remove
+export const Builder = (props) => {
   const Component = components[props.type]
 
   return <Component item={props.item} />

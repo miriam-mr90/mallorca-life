@@ -1,8 +1,7 @@
 import { GetStaticPropsResult } from 'next'
 import React, { ReactElement } from 'react'
-import { GetStaticProps } from 'next'
 import { Layout, MetaProps } from '../components/Layout'
-import Builder from '../components/Builder'
+import { Builder } from '../components/Builder'
 import { getPageData } from '../src/pages'
 
 interface HomeProps {
@@ -24,16 +23,16 @@ export async function getStaticProps(): Promise<GetStaticPropsResult<HomeProps>>
   }
 }
 
-export default function Home({ homePageData, meta }: HomeProps): ReactElement {
-  return homePageData.builder.map((item) => {
-    return (
-      <Layout meta={meta}>
-        <Builder
-          key={item.type.replace(/\s/g, '-')}
-          type={item.type}
-          item={item}
-        />
-      </Layout>
-    )
-  })
-}
+const Home: React.FC<HomeProps> = ({ homePageData, meta }) => (
+  <Layout meta={meta}>
+    {homePageData.builder.map((item) => (
+      <Builder
+        key={item.type.replace(/\s/g, '-')}
+        type={item.type}
+        item={item}
+      />
+    ))}
+  </Layout>
+)
+
+export default Home

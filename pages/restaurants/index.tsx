@@ -1,5 +1,5 @@
 import { GetStaticProps } from 'next'
-import React, { ReactElement } from 'react'
+import React from 'react'
 
 import { Layout, MetaProps } from '@/components/Layout'
 import { getRestaurants } from '../../src/restaurants'
@@ -23,12 +23,12 @@ export const getStaticProps: GetStaticProps = async () => {
   }
 }
 
-export default function RestaurantsPage({ meta, restaurants }): ReactElement {
-  return (
-    <Layout meta={meta}>
-      <ul>
-        <li className='text-brand-main'>{restaurants[0].title}</li>
-      </ul>
-    </Layout>
-  )
-}
+const RestaurantsPage: React.FC<RestaurantsPageProps> = ({ meta, restaurants }) => (
+  <Layout meta={meta}>
+    <ul>
+      <li className='text-brand-main'>{restaurants[0].title}</li>
+    </ul>
+  </Layout>
+)
+
+export default RestaurantsPage
