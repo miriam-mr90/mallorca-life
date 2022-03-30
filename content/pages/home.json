@@ -3,13 +3,16 @@
   "builder": [
     {
       "type": "header",
-      "photo": "public/images/laark-boshoff-5vu_vslxcyq-unsplash.jpg",
-      "title": "Header Home Title"
+      "title": "Header Home Title",
+      "text": "Lorem Ipsum is simply  dummy text of the printing  and typesetting"
     },
     {
       "type": "cta",
-      "title": "This is a CTA title",
-      "link": "https://google.es"
+      "title": "Get started",
+      "link": "#"
+    },
+    {
+      "type": "logo"
     }
   ]
 }

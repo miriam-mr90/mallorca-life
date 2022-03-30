@@ -13,9 +13,10 @@ export const GlobalStyles: React.FC = ({ children }) => (
   <div className="antialiased text-navy-900">{children}</div>
 )
 
-export const Layout: React.FC<{
-  meta: MetaProps
-}> = ({ meta: { title, description }, children }) => {
+export const Layout: React.FC<{ meta: MetaProps }> = ({
+  meta: { title, description },
+  children
+}) => {
   const [sideBar, setSideBar] = React.useState(false);
 
   const categories = [
@@ -40,10 +41,10 @@ export const Layout: React.FC<{
           opacity: sideBar ? 0.5 : 1
         }}
         transition={{ type: "spring", bounce: 0, duration: 0.4 }}
-        className="container flex flex-col min-h-full p-8 mx-auto"
+        className="container flex flex-col w-screen min-h-full"
       >
         <Header sideBar={sideBar} setSideBar={setSideBar}/>
-        <main className="flex-1 px-4">{children}</main>
+        <main className="flex-1 px-6">{children}</main>
       </motion.div>
       <Sidebar sideBar={sideBar} setSideBar={setSideBar} categories={categories}/>
     </GlobalStyles>
