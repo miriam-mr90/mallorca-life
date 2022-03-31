@@ -1,18 +1,30 @@
 {
+  "stylelint.enable": true,
+  "css.validate": false,
+  "less.validate": false,
+  "scss.validate": false,
+
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+  },
+  "editor.tabSize": 2,
+  "javascript.validate.enable": false,
+  "javascript.format.enable": false,
+  "typescript.format.enable": false,
+  "files.autoSave": "off",
+  "gitlens.showWelcomeOnInstall": false,
   "editor.formatOnSave": true,
   "eslint.format.enable": true,
-  "editor.codeActionsOnSave": {
-    "source.fixAll": true
-  },
-  "eslint.validate": ["javascript"],
+  "prettier.enable": false,
+  "eslint.validate": [
+    "javascript",
+    "typescript"
+  ],
   "[javascript]": {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   },
   "[typescript]": {
     "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   },
-  "stylelint.enable": true,
-  "css.validate": false,
-  "less.validate": false,
-  "scss.validate": false
+  "typescript.reportStyleChecksAsWarnings": false,
 }

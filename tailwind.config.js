@@ -1,4 +1,6 @@
 /** @type {import("@types/tailwindcss/tailwind-config").TailwindConfig } */
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 module.exports = {
   content: [
     './pages/**/*.{js,ts,jsx,tsx}',
@@ -10,15 +12,25 @@ module.exports = {
       black: '#23191A',
       brand: {
         main: '#E5737D',
-        light: '#9CD1DC',
+        light: '#FAE3E5',
         dark: '#268FB7'
       },
+      grey: '#C5C3C3'
     },
     fontFamily: {
       display: ['Titillium Web', 'sans-serif'],
       body: ['Inter', 'sans-serif'],
     },
     extend: {
+      fontFamily: {
+        rubik: ['Rubik', 'sans-serif'],
+
+      },
+      fontSize: {
+        'logo-xs': '1.25rem',
+        'logo-sm': '1.5rem',
+        'logo-md': '2rem',
+      },
       spacing: {
         '300': '18rem',
         '30': '3rem',

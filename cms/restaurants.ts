@@ -16,11 +16,27 @@ export const restaurants = {
       required: true,
     },
     {
-      label: 'Background Image',
-      name: 'photo',
+      label: 'Cover Image',
+      name: 'cover',
       widget: 'image',
-      required: true,
+      required: false,
       media_library: { config: { multiple: false } },
+    },
+    {
+      label: 'Address',
+      name: 'address',
+      widget: 'string',
+    },
+    {
+      label: 'Location Link',
+      name: 'locationLink',
+      widget: 'string',
+    },
+    {
+      label: 'Type',
+      name: 'type',
+      widget: 'select',
+      options: ['Asian', 'Italian', 'Mediterranean', 'Mexican', 'Other'],
     },
   ],
 }

@@ -1,35 +1,27 @@
-import React from "react";
+import React from 'react'
 import Image from 'next/image'
+import { Logo } from '@/components/Logo'
 
-export interface HeaderProps {
-  sideBar?: boolean
-  setSideBar?: (sideBar: boolean) => void
+const myLoader = ({ src, width, quality }) => {
+  return `${src}?w=${width}&q=${quality || 100}`
 }
 
-export const Header: React.FC<HeaderProps> = ({sideBar = false, setSideBar  }) => (
-  <div className="flex items-center justify-between px-6">
-   <h1>Mallorca Life</h1>
-    <button
-      className="h-10 px-4 my-3 text-sm uppercase bg-white rounded"
-      onClick={() => setSideBar(true)}
-    >
-      {sideBar ? "Close menu" : "Show menu"}
-    </button>
-  </div>
-)
+export const Header = ({ item }) => {
+  return (
+    <div className='flex flex-col justify-center text-center text-white'>
+      <div className="absolute top-0 left-0 w-screen -z-10">
+        <Image
+          src="/images/header_vector_bg.png"
+          width={500}
+          height={500}
+        />
+      </div>
+      <div className='mt-8 mb-6'>
+        <Logo theme="white" size="medium"/>
+      </div>
+      <p>Lorem Ipsum is simply  dummy text of the printing  and typesetting</p>
+      <button className='p-3 mt-6 font-semibold bg-white text-brand-main rounded-xl'>Get Started</button>
+    </div>
 
-
-{/* <NextLink href="/">
-  <a className="cursor-pointer">
-    HOME
-  </a>
-</NextLink> */}
-{/* <nav>
-  {categories.map((category) => {
-    return (
-      <NextLink key={category.title} href={category.url}>
-        <a>{category.title}</a>
-      </NextLink>
-    )
-  })}
-</nav> */}
+  )
+}

@@ -22,13 +22,11 @@
 body {
   width: 100vw;
   height: 100vh;
-  /* background: #9CD1DC; */
-  overflow: hidden;
   padding: 0;
   margin: 0;
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
+  font-family: "Rubik", sans-serif;
+
+  @apply text-black;
 }
 
 button {
@@ -39,7 +37,6 @@ button {
   -ms-user-select: none;
   cursor: pointer;
   background: transparent;
-
 }
 
 nav button {

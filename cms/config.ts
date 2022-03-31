@@ -1,7 +1,8 @@
 import { restaurants } from './restaurants'
+import { beaches } from './beaches-and-caves'
 import { pages } from './pages'
 
-module.exports = {
+const config = {
   // We want to manually init the config file
   cms_manual_init: true,
 
@@ -22,5 +23,7 @@ module.exports = {
   public_folder: 'public/images/',
 
   // The Pages collection
-  collections: [pages, restaurants],
+  collections: [pages, restaurants, beaches],
 }
+
+export { config }

@@ -6,9 +6,14 @@ module.exports = {
       test: /\.md$/,
       loader: 'frontmatter-markdown-loader',
       options: { mode: ['react-component'] },
-    })
+    });
 
-    return config
+    config.module.rules.push({
+      test: /\.svg$/,
+      use: ['@svgr/webpack'],
+    });
+
+    return config;
   },
   reactStrictMode: true,
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
@@ -20,4 +25,4 @@ module.exports = {
   sassOptions: {
     prependData: `@import "styles/variables"; @import "styles/mixins";`,
   },
-}
+};

@@ -1,33 +1,33 @@
 import { GetStaticProps } from 'next'
 import React from 'react'
+import { getBeaches } from '../../src/beaches'
 import { Layout, MetaProps } from '@/components/Layout'
-import { getRestaurants } from '../../src/restaurants'
 import { Card } from '@/components/Card'
 
-interface RestaurantsPageProps {
+interface BeachesPageProps {
   meta: MetaProps
-  restaurants: any[]
+  beaches: any[]
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const restaurants = await getRestaurants()
+  const beaches = await getBeaches()
 
   return {
     props: {
       meta: {
-        title: 'Restaurants',
-        description: 'Restaurants [meta description]',
+        title: 'Beaches & Caves',
+        description: 'Beaches & Caves [meta description]',
       },
-      restaurants,
+      beaches,
     },
   }
 }
 
-const RestaurantsPage: React.FC<RestaurantsPageProps> = ({ meta, restaurants }) => (
+const BeachesPage: React.FC<BeachesPageProps> = ({ meta, beaches }) => (
   <Layout meta={meta}>
-    <h2 className='my-6 text-2xl font-semibold'>Restaurants</h2>
+    <h2 className='my-6 text-2xl font-semibold'>Beaches & Caves</h2>
     <ul className='flex flex-col gap-5'>
-      {restaurants.map((item, index) => (
+      {beaches.map((item, index) => (
         <li key={index}>
           <Card
             title={item.title}
@@ -42,4 +42,4 @@ const RestaurantsPage: React.FC<RestaurantsPageProps> = ({ meta, restaurants }) 
   </Layout>
 )
 
-export default RestaurantsPage
+export default BeachesPage

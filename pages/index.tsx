@@ -1,7 +1,7 @@
+import React from 'react'
 import { GetStaticPropsResult } from 'next'
-import React, { ReactElement } from 'react'
-import { Layout, MetaProps } from '../components/Layout'
-import { Builder } from '../components/Builder'
+import { Builder } from '@/components/_builder'
+import { Layout, MetaProps } from '@/components/Layout'
 import { getPageData } from '../src/pages'
 
 interface HomeProps {
@@ -24,7 +24,7 @@ export async function getStaticProps(): Promise<GetStaticPropsResult<HomeProps>>
 }
 
 const Home: React.FC<HomeProps> = ({ homePageData, meta }) => (
-  <Layout meta={meta}>
+  <Layout meta={meta} isHome={true}>
     {homePageData.builder.map((item) => (
       <Builder
         key={item.type.replace(/\s/g, '-')}

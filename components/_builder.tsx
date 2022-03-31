@@ -1,20 +1,5 @@
-import Image from 'next/image'
-
-const myLoader = ({ src, width, quality }) => {
-  return `/${src}?w=${width}&q=${quality || 75}`
-}
-
-const Header = ({ item }) => {
-  return (
-    <div className="absolute top-0 left-0 w-screen -z-10">
-      <Image
-        src="/images/header_vector_bg.png"
-        width={500}
-        height={500}
-      />
-    </div>
-  )
-}
+import React from 'react'
+import { Header } from '@/components/Header'
 
 const Logo = () => {
   return <span>Mallorca•Life</span>

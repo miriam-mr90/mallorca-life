@@ -1,7 +1,7 @@
 import dynamic from 'next/dynamic'
 import Head from 'next/head'
 
-import config from '../cms/config.js'
+import { config } from '../cms/config'
 
 const CMS = dynamic(
   () =>
