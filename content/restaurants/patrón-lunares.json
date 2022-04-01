@@ -3,5 +3,6 @@
   "cover": "public/images/card-image.png",
   "address": "C. de la Fàbrica, 30, 07013 Palma, Illes Balears",
   "locationLink": "https://www.google.com/maps/place/Patro+Lunares/@39.572816,2.637234,15z/data=!4m2!3m1!1s0x0:0x45101636f18968c7?sa=X&ved=2ahUKEwjkr5WF-vD2AhXQxqQKHXqCATQQ_BJ6BAg_EAU",
-  "type": "Mediterranean"
+  "type": "Mediterranean",
+  "price": "€€€"
 }

@@ -38,6 +38,15 @@ export const restaurants = {
       name: 'type',
       widget: 'select',
       options: ['Asian', 'Italian', 'Mediterranean', 'Mexican', 'Other'],
+      required: false,
+    },
+    {
+      label: 'Price',
+      name: 'price',
+      widget: 'select',
+      options: ['€', '€€', '€€€', '€€€€', '€€€€€'],
+      hint: 'Price range of the restaurant',
+      required: false,
     },
   ],
 }

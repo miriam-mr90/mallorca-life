@@ -4,9 +4,18 @@ import { Layout, MetaProps } from '@/components/Layout'
 import { getRestaurants } from '../../src/restaurants'
 import { RestaurantCard } from '@/components/Cards/Restaurant'
 
+interface RestaurantProps {
+  title: string
+  cover: string
+  address: string
+  description: string | null | undefined
+  locationLink: string | null | undefined
+  type: string | null | undefined
+  proce: string | null | undefined
+}
 interface RestaurantsPageProps {
   meta: MetaProps
-  restaurants: any[]
+  restaurants: RestaurantProps[]
 }
 
 export const getStaticProps: GetStaticProps = async () => {
@@ -35,6 +44,8 @@ const RestaurantsPage: React.FC<RestaurantsPageProps> = ({ meta, restaurants }) 
             cover={item.cover}
             address={item.address}
             locationLink={item.locationLink}
+            type={item.type}
+            price={item.price}
           />
         </li>
       ))}
