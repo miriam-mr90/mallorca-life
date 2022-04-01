@@ -23,7 +23,7 @@ export const BeachCard = ({
           // src={`/${cover}`}
           src="/images/es-trenc.jpeg"
           layout='fill'
-          objectFit='fill'
+          objectFit='cover'
         />
       </div>
       <div className="absolute bottom-0 left-0 right-0 p-4 pt-6 text-white bg-gradient-to-t from-black-gradient rounded-b-2xl">
@@ -31,8 +31,8 @@ export const BeachCard = ({
         {locationLink && <div className="flex">
           <NextLink href={locationLink}>
             <a className='flex justify-center' target="_blank">
-              <Icon icon="pin" color="brand" size="x-small" className="mt-0.5 mr-1"/>
-              <span className="flex-1 text-xs">Get Location</span>
+              <Icon icon="pin" color="white" size="x-small" className="mr-1"/>
+              <span className="flex-1 text-xs">Open in Google Maps</span>
             </a>
           </NextLink>
         </div>}

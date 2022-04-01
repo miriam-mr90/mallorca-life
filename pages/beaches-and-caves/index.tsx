@@ -4,9 +4,16 @@ import { getBeaches } from '../../src/beaches'
 import { Layout, MetaProps } from '@/components/Layout'
 import { BeachCard } from '@/components/Cards/Beach'
 
+interface BeachProps {
+  title: string
+  cover: string
+  description: string
+  locationLink: string | null | undefined
+}
+
 interface BeachesPageProps {
   meta: MetaProps
-  beaches: any[]
+  beaches: BeachProps[]
 }
 
 export const getStaticProps: GetStaticProps = async () => {
