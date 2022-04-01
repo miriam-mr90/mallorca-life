@@ -13,7 +13,6 @@ export const restaurants = {
       label: 'Title',
       name: 'title',
       widget: 'string',
-      required: true,
     },
     {
       label: 'Cover Image',
@@ -26,11 +25,13 @@ export const restaurants = {
       label: 'Address',
       name: 'address',
       widget: 'string',
+      required: false,
     },
     {
       label: 'Location Link',
       name: 'locationLink',
       widget: 'string',
+      required: false,
     },
     {
       label: 'Type',

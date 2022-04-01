@@ -26,7 +26,7 @@ body {
   margin: 0;
   font-family: "Rubik", sans-serif;
 
-  @apply text-black;
+  @apply text-brand-black;
 }
 
 button {

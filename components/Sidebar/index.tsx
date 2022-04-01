@@ -28,7 +28,7 @@ export default function Sidebar({ sideBar = false, setSideBar, categories }) {
             </button>
             <NextLink href="/">
               <a className='flex justify-center'>
-                  <Logo icon="logo-sm" color="white"/>
+                <Logo icon="logo-sm" color="white"/>
               </a>
             </NextLink>
           </div>

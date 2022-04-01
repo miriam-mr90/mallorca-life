@@ -13,7 +13,6 @@ export const beaches = {
       label: 'Title',
       name: 'title',
       widget: 'string',
-      required: true,
     },
     {
       label: 'Cover Image',
@@ -26,12 +25,13 @@ export const beaches = {
       label: 'Description',
       name: 'description',
       widget: 'string',
-      required: true,
+      required: false,
     },
     {
       label: 'Location Link',
       name: 'locationLink',
       widget: 'string',
+      required: false,
     },
     {
       label: 'Type',

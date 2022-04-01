@@ -32,7 +32,7 @@ const PATHS = {
 
 const COLOR = {
   white: 'fill-white',
-  black: 'fill-black',
+  black: 'fill-brand-black',
   brand: 'fill-brand-main',
 }
 
