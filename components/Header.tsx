@@ -1,10 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
-import { Logo } from '@/components/Logo'
-
-const myLoader = ({ src, width, quality }) => {
-  return `${src}?w=${width}&q=${quality || 100}`
-}
+import NextLink from 'next/link'
+import { Logo } from './Icon'
 
 export const Header = ({ item }) => {
   return (
@@ -17,11 +14,14 @@ export const Header = ({ item }) => {
         />
       </div>
       <div className='mt-8 mb-6'>
-        <Logo theme="white" size="medium"/>
+        <NextLink href="/">
+          <a className='flex justify-center'>
+            <Logo icon="logo" color="white" />
+          </a>
+        </NextLink>
       </div>
       <p>Lorem Ipsum is simply  dummy text of the printing  and typesetting</p>
       <button className='p-3 mt-6 font-semibold bg-white text-brand-main rounded-xl'>Get Started</button>
     </div>
-
   )
 }

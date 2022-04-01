@@ -1,8 +1,8 @@
 import React from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import NextLink from 'next/link'
 import { NavMenu } from "./NavMenu";
-import { Icon } from '@/components/Icon'
-import { Logo } from '@/components/Logo'
+import { Icon, Logo } from '@/components/Icon'
 
 export default function Sidebar({ sideBar = false, setSideBar, categories }) {
   return (
@@ -22,11 +22,15 @@ export default function Sidebar({ sideBar = false, setSideBar, categories }) {
           <div className="flex items-center justify-center mb-16">
             <button
               onClick={() => setSideBar(false)}
-              className="absolute flex items-center justify-center p-2 left-2"
+              className="absolute flex items-center justify-center p-2 left-3"
             >
-              <Icon icon="close" color="white"/>
+              <Icon icon="close" color="white" size="small"/>
             </button>
-            <Logo theme="white" />
+            <NextLink href="/">
+              <a className='flex justify-center'>
+                  <Logo icon="logo-sm" color="white"/>
+              </a>
+            </NextLink>
           </div>
           <NavMenu categories={categories} />
         </motion.div>

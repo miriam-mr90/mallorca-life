@@ -32,9 +32,7 @@ export const Card = ({
       <p className="mb-2 font-semibold">{title}</p>
       {/* <p>{description}</p> */}
       <div className="flex">
-        <div>
-          <Icon icon="location" color="brand"/>
-        </div>
+        <Icon icon="pin" color="brand" size="x-small" className="mt-0.5 mr-1"/>
         <span className="flex-1 text-sm text-grey">{address}</span>
         {/* <span>{locationLink}</span> */}
       </div>

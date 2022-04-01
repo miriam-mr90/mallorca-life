@@ -30,10 +30,27 @@ export const Layout = ({
     {
       title: 'Restaurants',
       url: '/restaurants',
+      icon: 'restaurant'
     },
     {
       title: 'Beaches & Caves',
       url: '/beaches-and-caves',
+      icon: 'beach'
+    },
+    {
+      title: 'Tourist Attractions',
+      url: '/tourist-attractions',
+      icon: 'tourist-attractions'
+    },
+    {
+      title: 'Hiking',
+      url: '/hiking',
+      icon: 'hiking'
+    },
+    {
+      title: 'Bar',
+      url: '/bar',
+      icon: 'bar'
     },
   ]
   return (

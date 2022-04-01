@@ -1,6 +1,6 @@
 import React from "react"
-import { Icon } from '@/components/Icon'
-import { Logo } from '@/components/Logo'
+import NextLink from 'next/link'
+import { Icon, Logo } from '@/components/Icon'
 
 export interface HeaderProps {
   setSideBar: (sideBar: boolean) => void
@@ -10,7 +10,11 @@ export interface HeaderProps {
 export const TopBar: React.FC<HeaderProps> = ({setSideBar, isHome }) => (
   <div className="flex justify-center p-6">
     {!isHome && (
-      <Logo size="small"/>
+      <NextLink href="/">
+        <a className='flex justify-center'>
+          <Logo icon="logo-sm" color="brand" />
+        </a>
+      </NextLink>
     )}
     <button
       onClick={() => setSideBar(true)}
