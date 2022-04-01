@@ -2,7 +2,7 @@ import { GetStaticProps } from 'next'
 import React from 'react'
 import { Layout, MetaProps } from '@/components/Layout'
 import { getRestaurants } from '../../src/restaurants'
-import { Card } from '@/components/Card'
+import { RestaurantCard } from '@/components/Cards/Restaurant'
 
 interface RestaurantsPageProps {
   meta: MetaProps
@@ -29,7 +29,7 @@ const RestaurantsPage: React.FC<RestaurantsPageProps> = ({ meta, restaurants }) 
     <ul className='flex flex-col gap-5'>
       {restaurants.map((item, index) => (
         <li key={index}>
-          <Card
+          <RestaurantCard
             title={item.title}
             description={item.description}
             cover={item.cover}

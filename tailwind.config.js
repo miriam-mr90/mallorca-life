@@ -9,8 +9,10 @@ module.exports = {
   theme: {
     colors: {
       white: '#FFF',
-      black: '#23191A',
+      black:  '#000',
+      'black-gradient': '#000000ad',
       brand: {
+        black: '#23191A',
         main: '#E5737D',
         light: '#FAE3E5',
         dark: '#268FB7'

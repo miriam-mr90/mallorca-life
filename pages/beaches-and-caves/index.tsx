@@ -2,7 +2,7 @@ import { GetStaticProps } from 'next'
 import React from 'react'
 import { getBeaches } from '../../src/beaches'
 import { Layout, MetaProps } from '@/components/Layout'
-import { Card } from '@/components/Card'
+import { BeachCard } from '@/components/Cards/Beach'
 
 interface BeachesPageProps {
   meta: MetaProps
@@ -29,11 +29,10 @@ const BeachesPage: React.FC<BeachesPageProps> = ({ meta, beaches }) => (
     <ul className='flex flex-col gap-5'>
       {beaches.map((item, index) => (
         <li key={index}>
-          <Card
+          <BeachCard
             title={item.title}
             description={item.description}
             cover={item.cover}
-            address={item.address}
             locationLink={item.locationLink}
           />
         </li>
