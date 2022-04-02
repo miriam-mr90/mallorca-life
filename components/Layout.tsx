@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import Head from 'next/head'
 import { TopBar } from '@/components/TopBar'
 import Sidebar from "@/components/Sidebar"
+import { categories } from "@/src/content";
 
 export const GlobalStyles: React.FC = ({ children }) => (
   <div className="antialiased text-navy-900">{children}</div>
@@ -26,43 +27,6 @@ export const Layout = ({
 }: LayoutProps) => {
   const [sideBar, setSideBar] = React.useState(false);
 
-  const categories = [
-    {
-      title: 'Restaurants',
-      url: '/restaurants',
-      icon: 'restaurant'
-    },
-    {
-      title: 'Beaches & Caves',
-      url: '/beaches-and-caves',
-      icon: 'beach'
-    },
-    {
-      title: 'Tourist Attractions',
-      url: '/tourist-attractions',
-      icon: 'tourist-attractions'
-    },
-    {
-      title: 'Hiking',
-      url: '/hiking',
-      icon: 'hiking'
-    },
-    {
-      title: 'Bars',
-      url: '/bar',
-      icon: 'bar'
-    },
-    {
-      title: 'SUP, Kayak & Surf',
-      url: '/surf-kayak-sup',
-      icon: 'surf'
-    },
-    {
-      title: 'Boat Rentals',
-      url: '/bpat-rentals',
-      icon: 'boat'
-    },
-  ]
   return (
     <GlobalStyles>
       <Head>
