@@ -26,5 +26,5 @@ export const getCategoryContent = (contentFolderName:string) => {
 
 export const getPageContent = (page:string) => {
   const PAGES_PATH = 'content/pages'
-  return parsePage(path.join(PAGES_PATH, page))
+  return parsePage(path.join(PAGES_PATH, `${page}.json`))
 }

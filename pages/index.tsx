@@ -10,7 +10,7 @@ interface HomeProps {
 }
 
 export async function getStaticProps(): Promise<GetStaticPropsResult<HomeProps>> {
-  const homePageData = await getPageContent('home.json')
+  const homePageData = await getPageContent('home')
 
   return {
     props: {
