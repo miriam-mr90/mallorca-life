@@ -1,8 +1,8 @@
 import React from 'react'
 import { GetStaticPropsResult } from 'next'
+import { getPageContent } from '@/src/utils/pageData'
 import { Builder } from '@/components/_builder'
 import { Layout, MetaProps } from '@/components/Layout'
-import { getPageData } from '../src/pages'
 
 interface HomeProps {
   meta: MetaProps
@@ -10,7 +10,7 @@ interface HomeProps {
 }
 
 export async function getStaticProps(): Promise<GetStaticPropsResult<HomeProps>> {
-  const homePageData = await getPageData('home.json')
+  const homePageData = await getPageContent('home.json')
 
   return {
     props: {

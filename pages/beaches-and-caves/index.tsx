@@ -1,6 +1,6 @@
 import { GetStaticProps } from 'next'
 import React from 'react'
-import { getBeaches } from '../../src/beaches'
+import { getCategoryContent } from '@/src/utils/pageData'
 import { Layout, MetaProps } from '@/components/Layout'
 import { BeachCard } from '@/components/Cards/Beach'
 
@@ -17,7 +17,7 @@ interface BeachesPageProps {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const beaches = await getBeaches()
+  const beaches = await getCategoryContent('beaches')
 
   return {
     props: {

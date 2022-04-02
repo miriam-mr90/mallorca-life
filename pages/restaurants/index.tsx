@@ -1,7 +1,7 @@
 import { GetStaticProps } from 'next'
 import React from 'react'
+import { getCategoryContent } from '@/src/utils/pageData'
 import { Layout, MetaProps } from '@/components/Layout'
-import { getRestaurants } from '../../src/restaurants'
 import { RestaurantCard } from '@/components/Cards/Restaurant'
 
 interface RestaurantProps {
@@ -19,7 +19,7 @@ interface RestaurantsPageProps {
 }
 
 export const getStaticProps: GetStaticProps = async () => {
-  const restaurants = await getRestaurants()
+  const restaurants = await getCategoryContent('restaurants')
 
   return {
     props: {
