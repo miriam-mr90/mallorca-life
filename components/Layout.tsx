@@ -48,9 +48,19 @@ export const Layout = ({
       icon: 'hiking'
     },
     {
-      title: 'Bar',
+      title: 'Bars',
       url: '/bar',
       icon: 'bar'
+    },
+    {
+      title: 'SUP, Kayak & Surf',
+      url: '/surf-kayak-sup',
+      icon: 'surf'
+    },
+    {
+      title: 'Boat Rentals',
+      url: '/bpat-rentals',
+      icon: 'boat'
     },
   ]
   return (

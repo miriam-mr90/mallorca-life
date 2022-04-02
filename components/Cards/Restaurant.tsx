@@ -34,26 +34,11 @@ export const RestaurantCard = ({
         />
       </div>
       <div className="p-4">
-        <p className="mb-1 text-sm font-semibold">{title}</p>
-        <div className="flex items-center justify-between">
-          <span className="text-xs text-grey">{type || '-'}</span>
-          <span className="text-sm text-grey">{price || '€€€€€'}</span>
+        <p className="mb-1 font-semibold">{title}</p>
+        <div className="flex items-center justify-between text-sm text-grey">
+          <span>{type || '-'}</span>
+          <span>{price || '€€€€€'}</span>
         </div>
-        {/* {locationLink && (
-          <NextLink href={locationLink}>
-            <a className='flex justify-center' target="_blank">
-              <Icon icon="pin" color="brand" size="x-small" className="mt-0.5 mr-1"/>
-              <span className="flex-1 text-sm text-grey">{address}</span>
-            </a>
-          </NextLink>
-        )}
-
-        {address && !locationLink && (
-          <div className="flex justify-center">
-            <Icon icon="pin" color="brand" size="x-small" className="mt-0.5 mr-1"/>
-            <span className="flex-1 text-sm text-grey">{address}</span>
-          </div>
-        )} */}
       </div>
     </div>
   )

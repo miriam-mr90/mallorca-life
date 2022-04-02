@@ -33,18 +33,20 @@ export const getStaticProps: GetStaticProps = async () => {
 const BeachesPage: React.FC<BeachesPageProps> = ({ meta, beaches }) => (
   <Layout meta={meta}>
     <h2 className='my-6 text-2xl font-semibold'>Beaches & Caves</h2>
-    <ul className='flex flex-col gap-5'>
-      {beaches.map((item, index) => (
-        <li key={index}>
-          <BeachCard
-            title={item.title}
-            description={item.description}
-            cover={item.cover}
-            locationLink={item.locationLink}
-          />
-        </li>
-      ))}
-    </ul>
+    <section>
+      <ul className='flex flex-col gap-5'>
+        {beaches.map((item, index) => (
+          <li key={index}>
+            <BeachCard
+              title={item.title}
+              description={item.description}
+              cover={item.cover}
+              locationLink={item.locationLink}
+            />
+          </li>
+        ))}
+      </ul>
+    </section>
   </Layout>
 )
 

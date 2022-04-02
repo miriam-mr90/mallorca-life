@@ -12,6 +12,7 @@ import { Hiking } from './Categories/Hiking'
 import { Restaurant } from './Categories/Restaurant'
 import { Bar } from './Categories/Bar'
 import { NoPhoto } from './NoPhoto'
+import { Surf } from './Categories/Surf'
 import { LogoLarge, LogoSmall } from './Logo'
 
 const PATHS = {
@@ -27,6 +28,7 @@ const PATHS = {
   'pin': Pin,
   'restaurant': Restaurant,
   'star': Star,
+  'surf': Surf,
   'tourist-attractions': TouristAttractions,
 }
 

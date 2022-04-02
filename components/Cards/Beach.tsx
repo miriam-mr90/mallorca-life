@@ -27,12 +27,12 @@ export const BeachCard = ({
         />
       </div>
       <div className="absolute bottom-0 left-0 right-0 p-4 pt-6 text-white bg-gradient-to-t from-black-gradient rounded-b-2xl">
-        <p className="mb-1 text-sm font-semibold">{title}</p>
+        <p className="mb-1 font-semibold">{title}</p>
         {locationLink && <div className="flex">
           <NextLink href={locationLink}>
-            <a className='flex justify-center' target="_blank">
-              <Icon icon="pin" color="white" size="x-small" className="mr-1"/>
-              <span className="flex-1 text-xs">Open in Google Maps</span>
+            <a className='flex justify-center text-sm' target="_blank">
+              <Icon icon="pin" color="white" size="x-small" className="mt-0.5 mr-1"/>
+              <span className="flex-1">Open in Google Maps</span>
             </a>
           </NextLink>
         </div>}
