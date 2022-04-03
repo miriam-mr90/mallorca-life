@@ -36,6 +36,7 @@ const COLOR = {
   white: 'fill-white',
   black: 'fill-brand-black',
   brand: 'fill-brand-main',
+  grey: 'fill-grey',
 }
 
 const SIZE = {
@@ -47,7 +48,7 @@ const SIZE = {
 }
 
 interface IconProps {
-  color?: 'white' | 'black' | 'brand'
+  color?: 'white' | 'black' | 'brand' | "grey"
   size?: 'x-small' | 'small' | 'default' | 'mediun' | 'large'
   className?: string
   icon: string

@@ -1,5 +1,6 @@
 import React from 'react'
 import { Header } from '@/components/Header'
+import { PageNotFound } from '@/components/PageNotFound'
 
 const Logo = () => {
   return <span>Mallorca•Life</span>
@@ -18,6 +19,7 @@ const components = {
   content: Content,
   cta: Cta,
   logo: Logo,
+  PageNotFound: PageNotFound
 }
 
 export const Builder = (props) => {
