@@ -36,9 +36,9 @@ const RestaurantsPage: React.FC<RestaurantsPageProps> = ({ meta, restaurants }) 
   <Layout meta={meta}>
     <h2 className='my-6 text-2xl font-semibold'>Restaurants</h2>
     <section>
-      <ul className='flex flex-col gap-5'>
+      <ul className='flex flex-col gap-5 md:gap-0 md:flex-row md:space-x-4 md:space-y-4'>
         {restaurants.map((item, index) => (
-          <li key={index}>
+          <li key={index} className='md:w-1/3'>
             <RestaurantCard
               title={item.title}
               description={item.description}

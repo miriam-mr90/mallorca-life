@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import Head from 'next/head'
+import NextLink from 'next/link'
 import { TopBar } from '@/components/TopBar'
 import Sidebar from "@/components/Sidebar"
 import { categories } from "@/src/content";
@@ -40,10 +41,17 @@ export const Layout = ({
           opacity: sideBar ? 0.5 : 1
         }}
         transition={{ type: "spring", bounce: 0, duration: 0.4 }}
-        className="container flex flex-col w-screen min-h-full"
+        className="container flex flex-col w-screen min-h-screen mx-auto"
       >
         <TopBar setSideBar={setSideBar} isHome={isHome}/>
         <main className="flex-1 px-6">{children}</main>
+        <footer className="flex justify-center py-3 mt-8">
+          <NextLink href="https://www.linkedin.com/in/miriam-mr/">
+            <a className='text-xs text-brand-main'>
+              © Miriam M.
+            </a>
+          </NextLink>
+        </footer>
       </motion.div>
       <Sidebar sideBar={sideBar} setSideBar={setSideBar} categories={categories}/>
     </GlobalStyles>

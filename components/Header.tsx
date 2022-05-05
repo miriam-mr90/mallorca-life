@@ -2,11 +2,12 @@ import React from 'react'
 import Image from 'next/image'
 import NextLink from 'next/link'
 import { Logo } from './Icon'
+import { Button } from './Button'
 
 export const Header = ({ item }) => {
   return (
-    <div className='flex flex-col justify-center text-center text-white'>
-      <div className="absolute top-0 left-0 w-screen -z-10">
+    <div className='flex flex-col items-center justify-center text-center text-white'>
+      <div className="absolute top-0 left-0 w-screen -z-10 md:bg-brand-main">
         <Image
           src="/images/header_vector_bg.png"
           width={500}
@@ -21,7 +22,9 @@ export const Header = ({ item }) => {
         </NextLink>
       </div>
       <p>Lorem Ipsum is simply  dummy text of the printing  and typesetting</p>
-      <button className='p-3 mt-6 font-semibold bg-white text-brand-main rounded-xl'>Get Started</button>
+      <div className='mt-6'>
+        <Button label='Get Started' />
+      </div>
     </div>
   )
 }

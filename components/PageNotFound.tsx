@@ -16,7 +16,7 @@ const Section404 = ({title, leadText, linkLabel, linkUrl}:PageNotFoundProps) => 
       <Icon icon='surf' color='grey' size="large" />
       <div className='text-center'>
         <h1 className='text-lg font-semibold'>{title}</h1>
-        <p className='text-grey'>{leadText}</p>
+        <p>{leadText}</p>
       </div>
       <NextLink href={linkUrl}>
         <a className='flex justify-center font-semibold text-brand-main'>
