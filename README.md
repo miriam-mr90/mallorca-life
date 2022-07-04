@@ -1,5 +1,26 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+## Pending To Do / Next steps
+* Fix images render
+* Add filters in Restaurants and Beaches & Caves pages
+* Implement Google Maps to integrate as a view in Restaurants and Beaches & Caves pages
+* In Beaches & Caves, display type value
+* Add a new field in Beaches & Caves for displaying "caracterísitcas"
+* Create a new component to display a message for in coming features such as Tourist Attractions, Hiking, Boat Rentals...
+* Create "Perfect day in..." page
+  * A list with different items
+  * Each item will be a beach/place with things for doing there
+  * Example: Es Trenc -> Beach, restaurant, possible activities (snorkel, kayak, SUP)
+* Publish beta website in Surge or Netlify to be able to share with others
+* Design Boat Rentals page
+  * Contact data: telephone, number, social media profiles, website...
+  * Side of the island
+  * Price
+* Review how to import types (dev Slack channel) and implement it in `MetaProps`:
+  ```
+  # pages/restaurants/index.tsx
+  import { Layout, MetaProps } from '@/components/Layout'
+  ```
 ## Getting Started
 
 First, run the development server:
@@ -28,14 +49,6 @@ Navigate to `http://localhost:3000/admin`
 
 The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
 ## Deploy on Vercel
 
