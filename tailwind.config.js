@@ -17,7 +17,8 @@ module.exports = {
         light: '#FAE3E5',
         dark: '#268FB7'
       },
-      grey: '#BDBBBB'
+      grey: '#BDBBBB',
+      gold: '#EFD60C'
     },
     fontFamily: {
       display: ['Titillium Web', 'sans-serif'],

@@ -13,6 +13,7 @@ interface BeachProps {
 
 interface BeachesPageProps {
   meta: MetaProps
+  title: string
   beaches: BeachProps[]
 }
 
@@ -25,16 +26,17 @@ export const getStaticProps: GetStaticProps = async () => {
         title: 'Beaches & Caves',
         description: 'Beaches & Caves [meta description]',
       },
+      title: 'Beaches & Caves',
       beaches,
     },
   }
 }
 
-const BeachesPage: React.FC<BeachesPageProps> = ({ meta, beaches }) => (
+const BeachesPage: React.FC<BeachesPageProps> = ({ meta, title, beaches }) => (
   <Layout meta={meta}>
-    <h2 className='my-6 text-2xl font-semibold'>Beaches & Caves</h2>
+    <h2 className='my-6 text-2xl font-semibold'>{title}</h2>
     <section>
-      <ul className='flex flex-col gap-5'>
+      <ul className='grid gap-5 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
         {beaches.map((item, index) => (
           <li key={index}>
             <BeachCard

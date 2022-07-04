@@ -17,7 +17,7 @@ export const BeachCard = ({
   locationLink
 }:CardProps) => {
   return (
-    <div className="flex flex-col drop-shadow-md rounded-2xl">
+    <div className="flex flex-col drop-shadow-md rounded-2xl sm:h-full">
       <div className="relative w-full overflow-hidden shrink-0 h-52 rounded-2xl">
         <Image
           // src={`/${cover}`}
