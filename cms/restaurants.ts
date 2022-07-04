@@ -37,7 +37,7 @@ export const restaurants = {
       label: 'Type',
       name: 'type',
       widget: 'select',
-      options: ['Asian', 'Italian', 'Mediterranean', 'Mexican', 'Other'],
+      options: ['Asian', 'Italian', 'Mediterranean', 'Mexican', 'Llonguets', 'Other'],
       required: false,
     },
     {
