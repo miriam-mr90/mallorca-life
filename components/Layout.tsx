@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import Head from 'next/head'
 import NextLink from 'next/link'
 import { TopBar } from '@/components/TopBar'
-import Sidebar from "@/components/Sidebar"
+import { Sidebar } from "@/components/Sidebar"
 import { categories } from "@/src/content";
 
 export const GlobalStyles: React.FC = ({ children }) => (
