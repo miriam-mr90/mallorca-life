@@ -1,0 +1,10 @@
+{
+  "title": "About",
+  "builder": [
+    {
+      "type": "content",
+      "active": true,
+      "text": "Lorem Ipsum is simply  dummy text of the printing  and typesetting"
+    }
+  ]
+}

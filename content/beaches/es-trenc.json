@@ -3,5 +3,9 @@
   "description": "lorem ipsum dolor sit amet consectetur adipiscing elit sed do eiusmod tempor",
   "locationLink": "https://www.google.com/maps/place/Es+Trenc/data=!4m2!3m1!1s0x1297a921798e0b77:0x5d3dfd4c84e1c7f1?sa=X&ved=2ahUKEwi3_L6n-_D2AhUHy6QKHY9VAxoQ8gF6BAhHEAE",
   "type": "Beach",
-  "cover": "public/images/card-image.png"
+  "cover": "public/images/card-image.png",
+  "coordinates": {
+    "lat": 39.345906836639706,
+    "lng": 2.9845128830182777
+  }
 }

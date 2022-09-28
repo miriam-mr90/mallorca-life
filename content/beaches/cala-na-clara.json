@@ -1,4 +1,8 @@
 {
   "title": "Cala Na Clara",
-  "type": "Cave"
+  "type": "Cave",
+  "coordinates": {
+    "lat": 39.75805906585125,
+    "lng": 3.325786536376884
+  }
 }
