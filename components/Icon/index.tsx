@@ -1,6 +1,7 @@
 import React from 'react'
 import {
   Close,
+  Map,
   Menu,
   Pin,
   Star
@@ -23,6 +24,7 @@ const PATHS = {
   'hiking': Hiking,
   'logo': LogoLarge,
   'logo-sm': LogoSmall,
+  'map': Map,
   'menu': Menu,
   'no-photo': NoPhoto,
   'pin': Pin,

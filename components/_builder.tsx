@@ -1,13 +1,14 @@
 import React from 'react'
 import { Header } from '@/components/Header'
 import { PageNotFound } from '@/components/PageNotFound'
+import { Map } from '@/components/Map'
 
 const Logo = () => {
   return <span>Mallorca•Life</span>
 }
 
-const Content = ({ item }) => {
-  return <div>{item.content}</div>
+const Content = ({ text }) => {
+  return <div>{text}</div>
 }
 
 const Cta = ({ item }) => {
@@ -19,11 +20,14 @@ const components = {
   content: Content,
   cta: Cta,
   logo: Logo,
-  PageNotFound: PageNotFound
+  PageNotFound: PageNotFound,
+  placesMap: Map
 }
 
-export const Builder = (props) => {
-  const Component = components[props.type]
+export const Builder = ({type, item}) => {
+  const Component = components[type]
 
-  return <Component item={props.item} />
+  return (
+    item.active ? <Component {...item} /> : null
+  )
 }

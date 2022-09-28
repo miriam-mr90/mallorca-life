@@ -36,13 +36,14 @@ module.exports = {
       },
       spacing: {
         '300': '18rem',
+        '324': '24rem',
         '30': '3rem',
         '50': '5rem',
-      }
-    },
-    minWidth: {
-      '0': '0',
-      full: '100%',
+      },
+      minWidth: {
+        '0': '0',
+        full: '100%',
+      },
     },
   },
   plugins: [],

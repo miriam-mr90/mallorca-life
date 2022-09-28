@@ -18,12 +18,14 @@ export interface MetaProps {
 interface LayoutProps {
   meta: MetaProps
   isHome?: boolean
+  fullSize?: boolean
   children: React.ReactNode
 }
 
 export const Layout = ({
   meta: { title, description },
   isHome = false,
+  fullSize = false,
   children
 }: LayoutProps) => {
   const [sideBar, setSideBar] = React.useState(false);
@@ -44,7 +46,7 @@ export const Layout = ({
         className="container flex flex-col w-screen min-h-screen mx-auto"
       >
         <TopBar setSideBar={setSideBar} isHome={isHome}/>
-        <main className="flex-1 px-6">{children}</main>
+        <main className={`flex-1 ${!fullSize && 'px-6'}`}>{children}</main>
         <footer className="flex justify-center py-3 mt-8">
           <NextLink href="https://www.linkedin.com/in/miriam-mr/">
             <a className='text-xs text-brand-main'>

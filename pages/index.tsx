@@ -24,7 +24,7 @@ export async function getStaticProps(): Promise<GetStaticPropsResult<HomeProps>>
 }
 
 const Home: React.FC<HomeProps> = ({ homePageData, meta }) => (
-  <Layout meta={meta} isHome={true}>
+  <Layout meta={meta} isHome fullSize>
     {homePageData.builder.map((item) => (
       <Builder
         key={item.type.replace(/\s/g, '-')}
