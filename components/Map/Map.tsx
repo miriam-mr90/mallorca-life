@@ -14,16 +14,12 @@ interface Place {
   name: string
   address: string
   addresslink?: string
-  city: string
-  province: string
   coordinates: Coordinates
-  token?: string
-  cover: string
-  externalpurchaselink?: string
+  cover?: string
 }
 
 export interface MapProps {
-  title: string
+  title?: string
   places: Place[]
   zoom?: number
 }
@@ -72,106 +68,3 @@ export const Map: React.FC<MapProps> = ({ title, places, zoom = 7.6 }) => {
     </section>
   )
 }
-
-// import {
-//   useGoogleMap,
-//   GoogleMap,
-//   useJsApiLoader,
-//   Marker,
-//   InfoWindow,
-// } from '@react-google-maps/api'
-// import { useCallback, useState } from 'react'
-// import NextLink from 'next/link'
-
-// interface Coordinates {
-//   lat: number
-//   lng: number
-// }
-
-// interface Place {
-//   id: string
-//   name: string
-//   address: string
-//   addresslink?: string
-//   city: string
-//   province: string
-//   coordinates: Coordinates
-//   token?: string
-//   cover: string
-//   externalpurchaselink?: string
-// }
-
-// export interface PlacesMapProps {
-//   places: Place[]
-//   zoom?: number
-// }
-
-// const containerStyle = {
-//   width: '100%',
-//   height: '100%',
-// }
-
-// // Maplibre
-// // Mapbox
-// export const PlacesMap: React.FC<PlacesMapProps> = ({ places, zoom = 8 }) => {
-//   const { isLoaded } = useJsApiLoader({
-//     id: 'google-map-script',
-//     googleMapsApiKey:
-//     'AIzaSyDjxYBF-FaroARRkwYhP7geVica0L05Q6s'
-//   })
-
-//   const getCenterCoordinates = (() => {
-//     let lat = 0
-//     let lng = 0
-
-//     places.forEach((cinema) => {
-//       lat += cinema.coordinates.lat
-//       lng += cinema.coordinates.lng
-//     })
-
-//     return { lat: lat / places.length, lng: lng / places.length }
-//   })()
-
-//   const [map, setMap] = useState<google.maps.Map>(null)
-
-//   const onUnmount = useCallback(function callback() {
-//     setMap(null)
-//   }, [])
-
-//   const [selected, setSelected] = useState<Place>(null)
-
-//   return (
-//     <div className="relative w-full aspect-w-10 aspect-h-5 2xl:aspect-h-3 xl:aspect-h-4">
-//       {isLoaded && (
-//         <GoogleMap
-//           mapContainerStyle={containerStyle}
-//           center={getCenterCoordinates}
-//           zoom={zoom}
-//           onUnmount={onUnmount}
-//         >
-//           {places.map(
-//             (cinema) =>
-//               cinema.coordinates?.lat && (
-//                 <Marker
-//                   key={cinema.id}
-//                   position={cinema.coordinates}
-//                   onClick={() => setSelected(cinema)}
-//                 >
-//                   {selected && selected.id === cinema.id && (
-//                     <InfoWindow onCloseClick={() => setSelected(null)}>
-//                       <div className="text-base">
-//                         <NextLink href="/">
-//                           {cinema.name}
-//                         </NextLink>
-//                         <div className="">{cinema.city}</div>
-//                       </div>
-//                     </InfoWindow>
-//                   )}
-//                 </Marker>
-//               )
-//           )}
-//         </GoogleMap>
-//       )}
-//     </div>
-//   )
-// }

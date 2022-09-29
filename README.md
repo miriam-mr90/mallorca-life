@@ -3,10 +3,10 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 ## Pending To Do / Next steps
 * Fix images render
 * Add filters in Restaurants and Beaches & Caves pages
-* Implement Google Maps to integrate as a view in Restaurants and Beaches & Caves pages
+* Implement Google Maps to integrate as a view in Restaurants and Beaches & Caves pages (WIP)
 * In Beaches & Caves, display type value
 * Add a new field in Beaches & Caves for displaying "caracterísitcas"
-* Create a new component to display a message for in coming features such as Tourist Attractions, Hiking, Boat Rentals...
+* Create a new component to display a message for in comming features such as Tourist Attractions, Hiking, Boat Rentals...
 * Create "Perfect day in..." page
   * A list with different items
   * Each item will be a beach/place with things for doing there

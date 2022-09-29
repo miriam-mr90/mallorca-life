@@ -34,12 +34,13 @@ export const RestaurantCard = ({
   type,
   price
 }:CardProps) => {
+  console.log('cover', cover)
   return (
     <div className="flex flex-col bg-white drop-shadow-md rounded-2xl sm:h-full">
       <div className="relative w-full overflow-hidden h-44 shrink-0 rounded-t-2xl">
         <Image
-          // src={`/${cover}`}
-          src="/images/buscando-el-norte.jpeg"
+          src={`/${cover}`}
+          // src="/images/buscando-el-norte.jpeg"
           layout='fill'
           objectFit='cover'
         />
