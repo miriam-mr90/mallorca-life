@@ -2,26 +2,25 @@ import React from 'react'
 
 interface ButtonProps {
   type?: 'primary' | 'outlined' | 'link'
-  withIcon?: boolean
+  icon?: string
   disabled?: boolean
-  label?: string,
-  onClick?: () => void
+  children?: any,
+  onClick: () => void
 }
 
 
 export const Button = ({
   type = 'primary',
-  withIcon = false,
   disabled = false,
-  label,
+  children,
   onClick,
-}: ButtonProps) => (
+}: React.PropsWithChildren<ButtonProps>) => (
   <button
     type='button'
-    className='p-3 font-semibold bg-white text-brand-main rounded-xl w-max'
+    className={`p-3 font-semibold ${type === 'primary' ? 'bg-white text-brand-main' : 'bg-brand-main text-white'} rounded-xl w-max`}
     disabled={disabled}
     onClick={onClick}
   >
-    {label}
+    {children}
   </button>
 )

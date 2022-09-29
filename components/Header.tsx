@@ -28,7 +28,7 @@ export const Header: React.FC<HeaderProps> = ({ text, cta }) => {
       </div>
       <p>{text}</p>
       <div className='mt-6'>
-        <Button label={cta} />
+        <Button children={cta} onClick={() => console.log('Click on CTA')}/>
       </div>
     </div>
   )
