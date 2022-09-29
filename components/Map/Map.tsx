@@ -36,7 +36,7 @@ export const Map: React.FC<MapProps> = ({ title, places, zoom = 7.6 }) => {
   const [lng2] = useState(places[1].coordinates.lng)
   const [lat2] = useState(places[1].coordinates.lat)
   // const [zoom] = useState(14)
-  const [API_KEY] = useState('yHs9BRPxJNzP37WLCaRj')
+  const [API_KEY] = useState('')
 
   useEffect(() => {
     if (map.current) return //stops map from intializing more than once
